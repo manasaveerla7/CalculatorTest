@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite parallel="tests" name="CalculatorTestSuite"  thread-count="2">
+    <listeners>
+        <listener class-name="CalculatorApp.TestListenerClass" />
+    </listeners>
+    <test name="CalculatorPositiveTestCases">
+        <groups>
+        <run>
+            <include name="positive"></include>
+            <include name="negative"></include>
+        </run>
+        </groups>
+        <classes>
+            <class name="CalculatorApp.CalculatorTest">
+
+            </class>
+        </classes>
+    </test>
+</suite>
